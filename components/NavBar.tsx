@@ -3,6 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+interface NavLink {
+  href: string;
+  label: string;
+}
+
 // Customize these values to match your brand
 const BRAND_CONFIG = {
   appName: "Interactive Avatar",
@@ -13,11 +18,7 @@ const BRAND_CONFIG = {
     height: 67,
   },
   showNavLinks: false, // Set to true to show navigation links
-  navLinks: [
-    // Add your own navigation links here
-    // { href: "/about", label: "About" },
-    // { href: "/docs", label: "Docs" },
-  ],
+  navLinks: [] as NavLink[],
 };
 
 export default function NavBar() {
