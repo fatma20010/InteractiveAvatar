@@ -16,11 +16,12 @@ const fontMono = FontMono({
 
 export const metadata: Metadata = {
   title: {
-    default: "HeyGen Interactive Avatar SDK Demo",
-    template: `%s - HeyGen Interactive Avatar SDK Demo`,
+    default: "Interactive Avatar",
+    template: `%s - Interactive Avatar`,
   },
+  description: "Interactive AI Avatar Chat Application",
   icons: {
-    icon: "/heygen-logo.png",
+    icon: "/favicon.ico", // Replace with your own favicon
   },
 };
 
@@ -36,7 +37,7 @@ export default function RootLayout({
       lang="en"
     >
       <head />
-      <body className="min-h-screen bg-black text-white">
+      <body className="min-h-screen bg-background text-foreground">
         <main className="relative flex flex-col gap-6 h-screen w-screen">
           <NavBar />
           {children}

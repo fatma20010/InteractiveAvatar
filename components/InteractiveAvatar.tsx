@@ -124,7 +124,7 @@ function InteractiveAvatar() {
 
   return (
     <div className="w-full flex flex-col gap-4">
-      <div className="flex flex-col rounded-xl bg-zinc-900 overflow-hidden">
+      <div className="flex flex-col rounded-xl bg-card overflow-hidden border border-card-border">
         <div className="relative w-full aspect-video overflow-hidden flex flex-col items-center justify-center">
           {sessionState !== StreamingAvatarSessionState.INACTIVE ? (
             <AvatarVideo ref={mediaStream} />
@@ -132,16 +132,16 @@ function InteractiveAvatar() {
             <AvatarConfig config={config} onConfigChange={setConfig} />
           )}
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center p-4 border-t border-zinc-700 w-full">
+        <div className="flex flex-col gap-3 items-center justify-center p-4 border-t border-border w-full">
           {sessionState === StreamingAvatarSessionState.CONNECTED ? (
             <AvatarControls />
           ) : sessionState === StreamingAvatarSessionState.INACTIVE ? (
             <div className="flex flex-row gap-4">
               <Button onClick={() => startSessionV2(true)}>
-                Start Voice Chat
+                Start Talking
               </Button>
               <Button onClick={() => startSessionV2(false)}>
-                Start Text Chat
+                Start Chatting
               </Button>
             </div>
           ) : (

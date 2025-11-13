@@ -37,6 +37,23 @@ By default, there are several Public Avatars that can be used in Interactive Ava
 
 You can create your own custom Interactive Avatars at labs.heygen.com/interactive-avatar by clicking 'create interactive avatar' on the top-left of the screen.
 
+### Customizing with Your Own Avatars
+
+To customize this demo with your own avatars, see the **[CUSTOMIZATION.md](./CUSTOMIZATION.md)** guide for detailed instructions on:
+- Adding your custom avatars
+- Configuring avatar settings
+- Using custom knowledge bases
+- Troubleshooting common issues
+
+### Customizing Design & Branding
+
+To make this app your own, see the **[DESIGN_CUSTOMIZATION.md](./DESIGN_CUSTOMIZATION.md)** guide for:
+- Changing colors and theme
+- Adding your logo and branding
+- Customizing fonts and styling
+- Updating app name and metadata
+- Complete design system customization
+
 ### Where can I read more about enterprise-level usage of the Interactive Avatar API?
 
 Please read our Interactive Avatar 101 article for more information on pricing: https://help.heygen.com/en/articles/9182113-interactive-avatar-101-your-ultimate-guide

@@ -112,8 +112,21 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
         <Select
           isSelected={(option) => option === config.quality}
           options={Object.values(AvatarQuality)}
-          renderOption={(option) => option}
-          value={config.quality}
+          renderOption={(option) => {
+            if (option === AvatarQuality.Low) return "Low Connectivity";
+            if (option === AvatarQuality.Medium) return "Medium Connectivity";
+            if (option === AvatarQuality.High) return "High Connectivity";
+            return option;
+          }}
+          value={
+            config.quality === AvatarQuality.Low
+              ? "Low Connectivity"
+              : config.quality === AvatarQuality.Medium
+                ? "Medium Connectivity"
+                : config.quality === AvatarQuality.High
+                  ? "High Connectivity"
+                  : config.quality
+          }
           onSelect={(option) => onChange("quality", option)}
         />
       </Field>
@@ -121,14 +134,24 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
         <Select
           isSelected={(option) => option === config.voiceChatTransport}
           options={Object.values(VoiceChatTransport)}
-          renderOption={(option) => option}
-          value={config.voiceChatTransport}
+          renderOption={(option) => {
+            if (option === VoiceChatTransport.LIVEKIT) return "Mobile";
+            if (option === VoiceChatTransport.WEBSOCKET) return "Web";
+            return option;
+          }}
+          value={
+            config.voiceChatTransport === VoiceChatTransport.LIVEKIT
+              ? "Mobile"
+              : config.voiceChatTransport === VoiceChatTransport.WEBSOCKET
+                ? "Web"
+                : config.voiceChatTransport
+          }
           onSelect={(option) => onChange("voiceChatTransport", option)}
         />
       </Field>
       {showMore && (
         <>
-          <h1 className="text-zinc-100 w-full text-center mt-5">
+          <h1 className="text-foreground w-full text-center mt-5">
             Voice Settings
           </h1>
           <Field label="Custom Voice ID">
@@ -162,7 +185,7 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
               }
             />
           </Field>
-          <h1 className="text-zinc-100 w-full text-center mt-5">
+          <h1 className="text-foreground w-full text-center mt-5">
             STT Settings
           </h1>
           <Field label="Provider">
@@ -182,7 +205,7 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
         </>
       )}
       <button
-        className="text-zinc-400 text-sm cursor-pointer w-full text-center bg-transparent"
+        className="text-foreground/70 hover:text-foreground text-sm cursor-pointer w-full text-center bg-transparent transition-colors"
         onClick={() => setShowMore(!showMore)}
       >
         {showMore ? "Show less" : "Show more..."}

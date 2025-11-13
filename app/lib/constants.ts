@@ -1,23 +1,29 @@
+/**
+ * Avatar Configuration
+ * 
+ * To add your own custom avatars:
+ * 1. Get your avatar ID from HeyGen Labs: https://labs.heygen.com/interactive-avatar
+ * 2. Click "Select Avatar" and copy the avatar ID
+ * 3. Add a new object to this array with your avatar_id and a display name
+ * 
+ * Example:
+ * {
+ *   avatar_id: "your_custom_avatar_id_here",
+ *   name: "Your Avatar Name",
+ * }
+ * 
+ * Note: You can also use the "Custom Avatar ID" option in the UI to enter an avatar ID directly
+ * without adding it to this list.
+ */
+
 export const AVATARS = [
   {
     avatar_id: "Ann_Therapist_public",
-    name: "Ann Therapist",
-  },
-  {
-    avatar_id: "Shawn_Therapist_public",
-    name: "Shawn Therapist",
-  },
-  {
-    avatar_id: "Bryan_FitnessCoach_public",
-    name: "Bryan Fitness Coach",
+    name: "Ann Therapist crayMD",
   },
   {
     avatar_id: "Dexter_Doctor_Standing2_public",
-    name: "Dexter Doctor Standing",
-  },
-  {
-    avatar_id: "Elenora_IT_Sitting_public",
-    name: "Elenora Tech Expert",
+    name: "Dexter Business Doctor crayMD",
   },
 ];
 

@@ -1,7 +1,8 @@
 {
-  "name": "next-app-template",
-  "version": "0.0.1",
+  "name": "interactive-avatar-app",
+  "version": "1.0.0",
   "private": true,
+  "description": "Interactive AI Avatar Chat Application",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
