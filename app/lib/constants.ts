@@ -23,7 +23,7 @@ export const AVATARS = [
   },
   {
     avatar_id: "Dexter_Doctor_Standing2_public",
-    name: "Dexter Business Doctor crayMD",
+    name: "Dexter office doctor consultant crayMD",
   },
 ];
 
